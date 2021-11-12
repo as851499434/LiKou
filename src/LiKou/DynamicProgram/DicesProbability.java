@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Author: liangfan
  * @Date: 2021-11-11 16:28
- * @Description: 筛子点数概率 master
+ * @Description: 筛子点数概率 master1
  */
 public class DicesProbability {
     public double[] dicesProbability(int n) {
