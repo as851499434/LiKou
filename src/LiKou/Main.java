@@ -1,5 +1,7 @@
 package LiKou;
 
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -10,19 +12,13 @@ import java.util.stream.Collectors;
  */
 public class Main {
     public static void main(String[] args) {
-        List<Person> list = new ArrayList<Person>();
-        Person p1 = new Person("a", 11, "aaaaa");
-        Person p2 = new Person("b", 12, "bbbbb");
-        Person p3 = new Person("c", 13, "ccccc");
-        Person p4 = new Person("d", 14, "ddddd");
-        Person p5 = new Person("e", 15, "eeeee");
-        list = Arrays.asList(p1, p2, p3, p4, p5);
-        List<Person> a = list.stream().sorted(Comparator.comparingInt(Person::getAge)).collect(Collectors.toList());
-        int asInt = list.stream().mapToInt(Person::getAge).max().getAsInt();
-        list.stream().mapToInt(Person::getAge).reduce(0, Integer::sum);
-        System.out.println();
-        System.out.println(asInt);
-        System.out.println(a);
+        String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+        System.out.println(time);
+    }
+
+    static final int hash(Object key) {
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
     }
 }
 
