@@ -12,11 +12,13 @@ public class SearchInsert {
         int[] nums = {1,  3, 4, 5};
 
         System.out.println(searchInsert(nums,2));
+        System.out.println(9%3);
     }
     public static int searchInsert(int[] nums, int target) {
         // 二分法
         int left = 0, right = nums.length - 1 ;
         while (left <= right) {
+            // mid = (left + right) 防止 left+right 过大溢出
             int mid = left + (right - left)/2;
             if (nums[mid] == target) {
                 return mid;
