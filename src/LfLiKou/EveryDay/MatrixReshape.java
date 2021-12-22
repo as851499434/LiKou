@@ -19,8 +19,8 @@ import java.util.Arrays;
 
 public class MatrixReshape {
     public static void main(String[] args) {
-        int[][] arr = {{1, 2}};
-        int[][] ints = matrixReshape(arr, 1, 1);
+        int[][] arr = {{1, 2}, {3, 4}};
+        int[][] ints = matrixReshape(arr, 1, 4);
         for (int i = 0; i < ints.length; i++) {
             System.out.println(Arrays.toString(ints[i]));
         }
@@ -28,19 +28,18 @@ public class MatrixReshape {
 
     //ÓÅ»¯
     public static int[][] matrixReshape(int[][] mat, int r, int c) {
-        int m = mat.length, n = mat[0].length;
+        int m = mat.length, n = mat[0].length, left = 0, right = 0;
         if (r * c != m * n) {
             return mat;
         }
         int[][] ints = new int[r][c];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i > r - 1 || j > n - 1) {
-
-                } else {
-                    ints[i][j] = mat[i][j];
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                ints[i][j] = mat[left][right++];
+                if (right >= n) {
+                    left++;
+                    right = 0;
                 }
-
             }
         }
         return ints;
