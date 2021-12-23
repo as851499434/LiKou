@@ -20,8 +20,19 @@ public class CanConstruct {
     public static void main(String[] args) {
         String s = "bg";
         String s2 = "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj";
-        boolean b = canConstruct(s, s2);
+        boolean b = canConstruct2(s, s2);
         System.out.println(b);
+    }
+    //ÔÙ×öÒ»±é
+    public static boolean canConstruct2(String a, String b) {
+        int[] arr = new int[26];
+        for (char c : b.toCharArray()) {
+            arr[c - 'a']++;
+        }
+        for (char c : a.toCharArray()) {
+            if (--arr[c-'a'] < 0) return false;
+        }
+        return true;
     }
 
     /**
