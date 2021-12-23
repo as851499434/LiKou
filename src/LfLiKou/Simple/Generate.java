@@ -18,7 +18,24 @@ public class Generate {
         List<List<Integer>> generate = generate(5);
         System.out.println(generate.toString());
     }
+    //ÓÅ»¯
     public static List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> list = new ArrayList<>();
+        for (int i = 0; i < numRows; i++) {
+            List<Integer> sList = new ArrayList<>();
+            for (int j = 0; j < i + 1; j++) {
+                if (j == 0 || j == i) {
+                    sList.add(1);
+                } else {
+                    sList.add(list.get(i - 1).get(j-1) + list.get(i - 1).get(j));
+                }
+            }
+            list.add(sList);
+        }
+        return list;
+    }
+
+    public static List<List<Integer>> generate2(int numRows) {
         List<List<Integer>> list = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {
             if ( i  == 0) {
