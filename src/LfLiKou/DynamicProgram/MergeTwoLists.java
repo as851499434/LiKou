@@ -1,5 +1,7 @@
 package LfLiKou.DynamicProgram;
 
+import LfLiKou.ListNode;
+
 /**
  * @Author: liangfan
  * @Date: 2021-11-18 13:29
@@ -9,8 +11,7 @@ package LfLiKou.DynamicProgram;
  */
 public class MergeTwoLists {
     public static void main(String[] args) {
-        ListNode l1 = new ListNode();
-        ListNode l2 = new ListNode();
+
     }
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) {
@@ -31,19 +32,4 @@ public class MergeTwoLists {
 }
 
 
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
