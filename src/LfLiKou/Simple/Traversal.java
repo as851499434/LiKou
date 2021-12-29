@@ -25,8 +25,6 @@ import java.util.List;
  */
 
 public class Traversal {
-    List<Integer> list = new ArrayList<>();
-
     /**
      * Ç°Ğò±éÀú µİ¹é
      * @param root
