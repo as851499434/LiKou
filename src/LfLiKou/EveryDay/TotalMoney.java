@@ -33,7 +33,7 @@ public class TotalMoney {
 //        }
         int i = n / 7;
         int j = n % 7;
-        return i > 0 ? (28 * i + (1+(i - 1))*(i - 1)/2 * 7) + ((1+j)*j/2 + (i * j)) : (1+n)*n/2;
+        return i > 0 ? (28 * i + (1 + (i - 1)) * (i - 1) / 2 * 7) + ((1 + j) * j / 2 + (i * j)) : (1 + n) * n / 2;
 //        1+2
 //        2+3
 //        3+4
