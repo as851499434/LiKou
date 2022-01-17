@@ -22,15 +22,6 @@ public class TotalMoney {
     }
 
     public int totalMoney(int n) {
-//        int sum = 28;
-//        if (n / 7 > 0) {
-//            for (int i = 1; i < n / 7; i++) {
-//                sum = sum*2 + 7;
-//            }
-//            return sum;
-//        } else {
-//            return (1+n)*n/2;
-//        }
         int i = n / 7;
         int j = n % 7;
         return i > 0 ? (28 * i + (1 + (i - 1)) * (i - 1) / 2 * 7) + ((1 + j) * j / 2 + (i * j)) : (1 + n) * n / 2;
